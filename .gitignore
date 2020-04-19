@@ -8,4 +8,4 @@ META-INF/
 build/
 .gradle/
 target/
-node_modules/.lsp/debug.log
+node_modules/
