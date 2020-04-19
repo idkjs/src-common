@@ -54,11 +54,11 @@ else
     echo
     cp ../../${EXAMPLE_SNAKE}/${LANGUAGE}_${EXAMPLE_SNAKE}/${EXAMPLE_CAMEL}.${EXT} ${TARGET_CAMEL}.${EXT}
     if [ "$(uname -s)" = "FreeBSD" ]; then
-      sed -ir "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" ${EXAMPLE_CAMEL}.${EXT}
-      sed -ir "s/${EXAMPLE_CAMEL}/${TARGET_CAMEL}/g" ${EXAMPLE_CAMEL}.${EXT}
+      sed -i ' ' r "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" ${EXAMPLE_CAMEL}.${EXT}
+      sed -i ' ' r "s/${EXAMPLE_CAMEL}/${TARGET_CAMEL}/g" ${EXAMPLE_CAMEL}.${EXT}
     else
-      sed -i "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" ${EXAMPLE_CAMEL}.${EXT}
-      sed -i "s/${EXAMPLE_CAMEL}/${TARGET_CAMEL}/g" ${EXAMPLE_CAMEL}.${EXT}
+      sed -i ' '  "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" ${EXAMPLE_CAMEL}.${EXT}
+      sed -i ' '  "s/${EXAMPLE_CAMEL}/${TARGET_CAMEL}/g" ${EXAMPLE_CAMEL}.${EXT}
     fi
   else
     echo
