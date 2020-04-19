@@ -6,7 +6,7 @@ if [ $# -ne 0 ]; then
 fi
 
 export OS=$(uname -s)
-TARGET_SNAKE=$(basename $(pwd) | sed 's/^[^_]*_//')
+TARGET_SNAKE=$(basename $(pwd) | sed -e 's/^[^_]*_//')
 LANGUAGE=$(basename $(pwd) | awk -F_ '{print  $1}')
 EXT=java
 EXAMPLE_CAMEL=elpmaxE
@@ -59,7 +59,7 @@ else
     echo
     echo cp ../../${EXAMPLE_SNAKE}/${LANGUAGE}_${EXAMPLE_SNAKE}/${EXAMPLE_CAMEL}.${EXT} ${TARGET_CAMEL}.${EXT}
     cp ../../${EXAMPLE_SNAKE}/${LANGUAGE}_${EXAMPLE_SNAKE}/${EXAMPLE_CAMEL}.${EXT} ${TARGET_CAMEL}.${EXT}
-    sed -i "s/${EXAMPLE_CAMEL}/${TARGET_CAMEL}/g" ${TARGET_CAMEL}.${EXT}
+    sed -e -i "s/${EXAMPLE_CAMEL}/${TARGET_CAMEL}/g" ${TARGET_CAMEL}.${EXT}
   else
     echo
   fi

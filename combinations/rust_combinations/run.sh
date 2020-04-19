@@ -6,7 +6,7 @@ if [ $# -ne 0 ]; then
 fi
 
 export OS=$(uname -s)
-TARGET_SNAKE=$(basename $(pwd) | sed 's/^[^_]*_//')
+TARGET_SNAKE=$(basename $(pwd) | sed -e 's/^[^_]*_//')
 LANGUAGE=$(basename $(pwd) | awk -F_ '{print  $1}')
 EXT=rs
 EXAMPLE_CAMEL=elpmaxE
@@ -60,9 +60,9 @@ else
     echo
     cp ../../${EXAMPLE_SNAKE}/${LANGUAGE}_${EXAMPLE_SNAKE}/src/main.${EXT} src/main.${EXT}
     if [ "$(uname -s)" = "FreeBSD" ]; then
-      sed -ir "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" src/main.${EXT}
+      sed -e -ir "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" src/main.${EXT}
     else
-      sed -i "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" src/main.${EXT}
+      sed -e -i "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" src/main.${EXT}
     fi
   else
     echo
