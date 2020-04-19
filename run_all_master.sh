@@ -8,7 +8,7 @@ fi
 PROGRAM=$(basename $(pwd))
 WD=$(pwd)
 
-for ELEMENT in $(find . -mindepth 1 -maxdepth 1 -type d -print | sort); do
+for ELEMENT in $(find . -mindepth 1 -maxdepth 2 -type d -print | sort); do
   echo "${ELEMENT}"
   cd "${ELEMENT}"
   if [ -f run.sh ]; then
