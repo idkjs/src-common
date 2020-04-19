@@ -62,8 +62,8 @@ else
       sed -ir ' '  "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" ${TARGET_SNAKE}.${EXT}
       sed -ir ' '  "s/${EXAMPLE_CAMEL}/${TARGET_CAMEL}/g" ${TARGET_SNAKE}.${EXT}
     else
-      sed -e -i "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" ${TARGET_SNAKE}.${EXT}
-      sed -e -i "s/${EXAMPLE_CAMEL}/${TARGET_CAMEL}/g" ${TARGET_SNAKE}.${EXT}
+      sed -i ' '  "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" ${TARGET_SNAKE}.${EXT}
+      sed -i ' '  "s/${EXAMPLE_CAMEL}/${TARGET_CAMEL}/g" ${TARGET_SNAKE}.${EXT}
     fi
   else
     echo
