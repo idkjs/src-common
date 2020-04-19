@@ -45,7 +45,7 @@ else
     if [ "$(uname -s)" = "FreeBSD" ]; then
       sed -ir ' ' "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" ${TARGET_SNAKE}.${EXT}
     else
-      sed -i ' '  "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" ${TARGET_SNAKE}.${EXT}
+      sed -i ' ' "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" ${TARGET_SNAKE}.${EXT}
     fi
   else
     echo

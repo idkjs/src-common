@@ -59,7 +59,7 @@ else
     echo
     echo cp ../../${EXAMPLE_SNAKE}/${LANGUAGE}_${EXAMPLE_SNAKE}/${EXAMPLE_CAMEL}.${EXT} ${TARGET_CAMEL}.${EXT}
     cp ../../${EXAMPLE_SNAKE}/${LANGUAGE}_${EXAMPLE_SNAKE}/${EXAMPLE_CAMEL}.${EXT} ${TARGET_CAMEL}.${EXT}
-    sed -i ' '  "s/${EXAMPLE_CAMEL}/${TARGET_CAMEL}/g" ${TARGET_CAMEL}.${EXT}
+    sed -i ' ' "s/${EXAMPLE_CAMEL}/${TARGET_CAMEL}/g" ${TARGET_CAMEL}.${EXT}
   else
     echo
   fi

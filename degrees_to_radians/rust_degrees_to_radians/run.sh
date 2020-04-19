@@ -60,9 +60,9 @@ else
     echo
     cp ../../${EXAMPLE_SNAKE}/${LANGUAGE}_${EXAMPLE_SNAKE}/src/main.${EXT} src/main.${EXT}
     if [ "$(uname -s)" = "FreeBSD" ]; then
-      sed -ir ' '  "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" src/main.${EXT}
+      sed -ir ' ' "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" src/main.${EXT}
     else
-      sed -i ' '  "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" src/main.${EXT}
+      sed -i ' ' "s/${EXAMPLE_SNAKE}/${TARGET_SNAKE}/g" src/main.${EXT}
     fi
   else
     echo
